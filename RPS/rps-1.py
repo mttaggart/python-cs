@@ -1,6 +1,10 @@
 # A simple rock, paper, scissors script submitted as a demo of easy game-making
 # In Python
-# Note that this is a functionally-built program
+# Certain parts of this program are functional—that is, written in functions that
+# work together. Some parts aren't. As we improve the program, you'll find that
+# This functional way of doing things has some real advantages.
+
+import random # We need thr random module for the computer to play
 
 beats = {
     "rock":"scissors",
@@ -8,7 +12,7 @@ beats = {
     "scissors":"paper"
 }
 
-choices = beats.keys()
+choices = list(beats.keys())
 
 def get_computer_choice():
     return random.choice(choices)
