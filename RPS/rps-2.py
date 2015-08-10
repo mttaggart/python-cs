@@ -29,6 +29,12 @@ while player_choice != "quit":
     But we couldn't have written our while statement that way without creating
     the player_choice variable beforehand!
     """
+
+    #This will show the score every time the loop runs.
+    print("Wins:", wins)
+    print("Losses:", losses)
+    print("Ties:", ties)
+
     #It's a good idea to give players some instructions
     print("Choose rock, paper, scissors, or 'quit' to quit.")
     player_choice = input("Rock, paper, or scissors? ").lower().strip()
@@ -56,7 +62,20 @@ while player_choice != "quit":
             losses += 1
 
 # We're now outside the loop. Everything below only happens once you enter 'quit'.
+# Look familiar?
 print("Total score:")
 print("Wins:", wins)
 print("Losses:", losses)
 print("Ties:", ties)
+
+"""
+This is getting better, but we're breaking a cardinal programming rule:
+Never Repeat Yourself! We're using two sets of print statements to print out
+the score. We're also getting to a point where our code is getting somewhat messy.
+
+What does messy mean? Code can be considered messy when the programming structure
+gets in the way of understanding what the program does. Take our conditionals for
+comparing computer_choice and player_choice: if we could wrap that up into a box
+so we only need to worry about what goes in and what goes out, our code would
+be much easier to read. That's what we'll do in the third version of RPS.
+"""
