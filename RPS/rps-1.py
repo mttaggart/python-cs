@@ -17,7 +17,7 @@ choices = list(beats.keys())
 # Get the player choice from the input command.
 # The lower() is used to correct for people typing with capitals.
 # The strip() removes any trailing space that might mess us up.
-player_choice = input("Rock, paper, or scissors?").lower().strip()
+player_choice = input("Rock, paper, or scissors? ").lower().strip()
 
 # Finally, time to compare! But we have to account for cheaters/mistakes.
 if player_choice not in choices:
@@ -25,10 +25,13 @@ if player_choice not in choices:
 else:
     # Here we make the computer choose, then compare the two.
     computer_choice = random.choice(choices)
-    if beats[player_choice] == computer_choice
+    print("Computer chose " + computer_choice)
+    if beats[player_choice] == computer_choice:
         print("You win!")
+    elif player_choice == computer_choice:
+        print("Tie!")
     else:
-        print("You lose")
+        print("You lose!")
 
 """
 This program works, but it's quite limited. Probably its biggest limitation
