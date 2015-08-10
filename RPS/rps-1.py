@@ -1,9 +1,7 @@
-# A simple rock, paper, scissors script submitted as a demo of easy game-making
-# In Python
-# Certain parts of this program are functional—that is, written in functions that
-# work together. Some parts aren't. As we improve the program, you'll find that
-# This functional way of doing things has some real advantages.
-
+"""
+A simple rock, paper, scissors script submitted as a demo of easy game-making
+In Python.
+"""
 import random # We need thr random module for the computer to play
 
 # This dictionary relates a choice to what it defeats for easy comparison later.
