@@ -12,7 +12,7 @@ def get_values():
     x = input("What is the first number? ")
     y = input("What is the second number? ")
     try:
-        #input() interprets user input as strings. Let's try converting to int...
+        #Before, the program would have failed on non-integer input. Now we can catch it.
         int_x = int(x)
         int_y = int(y)
     except ValueError: #If the inputs can't be parsed into
@@ -32,7 +32,7 @@ def mult(terms):
     for i in range(x):
         product += y
 
-    return product 
+    return product
 
 values = get_values()
 answer = mult(values)

@@ -9,8 +9,9 @@ def get_values():
     Retrieves two values to multiply
     """
 
-    x = input("What is the first number? ")
-    y = input("What is the second number? ")
+    #Now we do the input/conversions to int in one line. What's the risk here?
+    x = int(input("What is the first number? "))
+    y = int(input("What is the second number? "))
     return (x,y) #What is this? It's a new data type: a "tuple"
 
 def mult(terms):

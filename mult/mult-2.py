@@ -8,6 +8,10 @@ a problem, but it will get messy soon.
 x = input("What is the first number? ")
 y = input("What is the second number? ")
 
+#Now we have to convert these into integers
+x = int(x)
+y = int(y)
+
 #We need a place to store our product
 product = 0
 

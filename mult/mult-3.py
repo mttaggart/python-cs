@@ -10,6 +10,8 @@ def get_values():
 
     x = input("What is the first number? ")
     y = input("What is the second number? ")
+    x = int(x)
+    y = int(y)
     return (x,y) #What is this? It's a new data type: a "tuple"
 
 #Here's where we call the functions we defined above.
