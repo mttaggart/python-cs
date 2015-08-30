@@ -1,5 +1,7 @@
-# Multiply and Divide
-In this lesson, students will use Python to discover that all complex math operations are just implementations of addition/subtraction Well, really addition.
+# Multiply
+In this lesson, students will use Python to discover that all complex math
+operations are just implementations of addition/subtraction Well,
+really addition.
 
 ## Essential Questions
 * How are complex mathematical operations just repetitions of simpler ones?
