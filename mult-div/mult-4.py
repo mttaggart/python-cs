@@ -1,6 +1,7 @@
 """
-Time to introduce functions! We will define the steps of our program
-functionally, then call the functions.
+Now we'll functionify the multiplication process. This seems like a lot more
+code—why bother? As we add features to our program, this strong foundation
+will make it easier for us to add complexity.
 """
 
 def get_values():
@@ -24,7 +25,7 @@ def mult(terms):
     for i in range(x):
         product += y
 
-    return(product) #Notice that we're returning instead of printing here.
+    return product #Notice that we're returning instead of printing here.
 
 #Here's where we call the functions we defined above.
 values = get_values()
