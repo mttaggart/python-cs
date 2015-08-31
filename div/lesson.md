@@ -46,3 +46,11 @@ starting point (the first term); we know the size of our steps (the second term)
 
  Armed with this concept, students should be able to use a `while` loop to produce
  a simple integer division algorithm—even accounting for remainders.
+
+ ### div-1.py
+ A simple switch of + to - of the code from mult-5.py. It will work sometimes, but
+ rarely. It isn't the correct algorithm for this. Often you'll notice the answer
+ comes back negative. But we *know* we have to stop at 0. How can we do that?
+
+ The easiest way is to use the arrival at 0 as a condition to stop our looping.
+ That's what `while` loops are for.

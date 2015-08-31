@@ -18,7 +18,7 @@ def get_values():
         print("We need two integers to divide!")
         return get_values() #On an error, we're going to run the function again
 
-    return (x,y)
+    return (int_x,int_y)
 
 def div(terms):
     """
@@ -28,9 +28,18 @@ def div(terms):
     a,b = terms[0], terms[1]
     #obviously we can't start at 0 and subtract; we'll get a negative!
     #Instead we begin at the top—our dividend.
-    product = a
+    quotient = a
 
-    for i in range(x):
-        product -= y
+    for i in range(b):
+        quotient -= b
 
-    return product
+    return quotient
+
+"""
+This is obviously not correct, but that is the point. Getting a certain kind of
+wrong answer here helps us learn how to arrive at the right one.
+"""
+
+values = get_values()
+answer = div(values)
+print(answer)
