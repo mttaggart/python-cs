@@ -29,8 +29,8 @@ def mult(terms):
     a,b = terms[0], terms[1]
     product = 0
 
-    for i in range(x):
-        product += y
+    for i in range(a):
+        product += b
 
     return product
 
