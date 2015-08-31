@@ -2,7 +2,7 @@
 In this lesson, students will build on what they learned in **mult** to do integer
 division.
 
-##Recommended Prerequisite Modules
+## Recommended Prerequisite Modules
 * mult
 
 ## Essential Questions
@@ -16,7 +16,7 @@ division.
 ## Skills
 * `while` loops
 
-## Instructional suggestions
+## Instructional Suggestions
 
 This module is built around a simple question: "If multiplication is repeated
 addition, is division repeated subtraction?" Let students grapple with that one
