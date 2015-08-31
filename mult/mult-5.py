@@ -26,7 +26,7 @@ def mult(terms):
     Takes a 2-element tuple TERMS and multiplies the two terms
     """
 
-    a,b = input_tuple[0], input_tuple[1]
+    a,b = terms[0], terms[1]
     product = 0
 
     for i in range(x):
