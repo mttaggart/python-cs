@@ -23,8 +23,8 @@ def mult(terms):
     product = 0
 
     #Now we take those two numbers and feed them through a loop
-    for i in range(x):
-        product += y
+    for i in range(a):
+        product += b
 
     return product #Notice that we're returning instead of printing here.
 
