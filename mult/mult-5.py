@@ -19,7 +19,7 @@ def get_values():
         print("We need two integers to multiply!")
         return get_values() #On an error, we're going to run the function again
 
-    return (x,y)
+    return (int_x,int_y)
 
 def mult(terms):
     """
