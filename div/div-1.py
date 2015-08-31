@@ -25,3 +25,12 @@ def div(terms):
     Takes a 2 tuple TERMS—dividend and divisor—and returns the quotient.
     This one uses a simple reversal of the mult() function.
     """
+    a,b = terms[0], terms[1]
+    #obviously we can't start at 0 and subtract; we'll get a negative!
+    #Instead we begin at the top—our dividend.
+    product = a
+
+    for i in range(x):
+        product -= y
+
+    return product
