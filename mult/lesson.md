@@ -3,6 +3,10 @@ In this lesson, students will use Python to discover that all complex math
 operations are just implementations of addition/subtraction Well,
 really addition.
 
+##Recommended Prerequisite Modules
+* str
+* list
+
 ## Essential Questions
 * How are complex mathematical operations just repetitions of simpler ones?
 * How can we use programming to take large problems and reduce them to smaller ones?
