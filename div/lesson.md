@@ -54,3 +54,14 @@ starting point (the first term); we know the size of our steps (the second term)
 
  The easiest way is to use the arrival at 0 as a condition to stop our looping.
  That's what `while` loops are for.
+
+ ### div-2.py
+ Here two things have changed. First, a `while` loop replaces the `for` loop.
+`while` loops require a condition to continue looping. In this case, we check
+if another subtraction of the divisor from the dividend would result take the
+dividend below 0. We increment the quotient each time through the loop, thereby
+counting the "steps".
+
+The coolest part of this algorithm is how subtracting from the dividend until
+doing so would take us below 0 leaves us with a shrunken dividend, also known as
+a remainder. We get that for free by structuring the algorithm this way.
