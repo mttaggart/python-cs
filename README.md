@@ -18,6 +18,9 @@ environment, so go get that. And, of course, I recommend using a GNU/Linux
 operating system, but any \*Nix-flavored OS will do. I suppose Windows would be
 fine. I honestly haven't ever run Python on Windows.
 
+A nice text editor like [Atom](http://atom.io) might be helpful as well. This
+project was written in it!
+
 ## How do I use these lessons?
 You, the teacher, should read the `lesson.md` file in each lesson directory.
 Inside, you'll find instructional guidelines based on an Understanding-by-Design
