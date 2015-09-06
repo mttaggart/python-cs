@@ -77,3 +77,30 @@ for details on exactly what is possible with mutable sequence types like lists.
 
  When that's finished, you can move on to the first piece of code:
  `inventory-1.py`
+
+ ## inventory-1.py
+ A very simple program that wraps `append()` in a "setter" function. Load this
+ up in IDLE and use `add_item()` with a string to see items get added to the
+ `inventory` list. If functions haven't been covered, this is also a great way
+ to introduce functions, since the setter is so simple.
+
+ Remember that you can ask IDLE to print `inventory` at any time, and should
+ after each call of these functions!
+
+ **Note about setters:** Later in your Python journey, you'll find that Python
+ objects have a more formal method of creating "setter" and "getter" methods.
+ But for now, we'll use the same term for any function that returns or modifies
+ a variable.
+
+ ## inventory-2.py
+ Two new functions have been added to play with: `pull_last_item()` and
+ `remove_by_name()`. These functions behave exactly as you'd expect. The first
+ requires no arguments and simply "pops" off the last-added item to `inventory`.
+ The second removes an item by name. It takes a string as an argument.
+
+ But wait: we need to make sure there is such an item to remove, since there's
+ nothing stopping a cruel user from telling the function to remove something
+ that isn't in the inventory. How do we do that?
+
+ This second function introduces the [try/except](https://docs.python.org/3.4/reference/compound_stmts.html#try)
+ model of error handling. Use it well.

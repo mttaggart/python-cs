@@ -10,6 +10,9 @@ do we even need a wrapper? Sometimes we like to make the output of a setter more
 inventory = []
 
 def add_item(item):
+    """
+    Adds item to inventory.
+    """
     inventory.append(item)
     add_message = "{} added to inventory.".format(item)
     print(add_message)
