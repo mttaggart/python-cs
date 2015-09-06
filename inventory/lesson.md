@@ -47,7 +47,33 @@ Let's try:
 
 Get an error? Maybe something like:
 
-`item tuple does not support item assignment`
+`TypeError: 'tuple' object does not support item assignment`
 
 Tuples are *immutable*: they can't be changed once they're set. To do that, we
-need to switch to another iterable data type: **lists**. 
+need to switch to another iterable data type: **lists**.
+
+So using our enterprising collection of captains (or any list of your/your
+  students') once more, let's try:
+
+`>>> captains = ["Pike","Kirk","Picard","Sisko","Janeway"]`
+
+Notice the brackets instead of parens? That's how we know it's a list.
+
+Lists have special *methods* associated with them. Most important of these is
+`append()`. Let's add another captain (or whatever) to our list:
+
+```
+>>> captains.append("Archer")
+>>> captains
+['Pike','Kirk','Picard','Sisko','Janeway','Archer']
+```
+
+And that's how we add new items to a list. Can we remove them?
+
+Yes—within some limits. [Read the docs](https://docs.python.org/3.4/library/stdtypes.html#mutable-sequence-types)
+for details on exactly what is possible with mutable sequence types like lists.
+ Pay close attention to `pop()`, `insert()`, and `remove()`. Experiment with
+ these methods on your test list in the IDLE shell.
+
+ When that's finished, you can move on to the first piece of code:
+ `inventory-1.py`
