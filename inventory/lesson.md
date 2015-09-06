@@ -16,7 +16,7 @@ tuples, lists, and dictionaries.
 ## Skills
 
 ## Instructional Suggestions
-Before jumping into any code examples, a simply exercise on indexes will be
+Before jumping into any code examples, a simple exercise on indexes will be
  helpful.
 
 Begin by asking students to make lists of things. It doesn't really matter
