@@ -45,6 +45,7 @@ These two are known as "base cases"—the simplest form(s) of a given problem in
 a recursive algorithm. They're the floor, so to speak, of our recursion.
 
 ## pal-1.py
-
 This file uses an iterative approach to finding a palindrome. Nothing different
 here except for the string slicing. Strings, like lists, can be accessed by index using brackets.
+
+The strategy for this algorithm is no different than the strategy for the recursive algorithm coming up next: take a big string and slice it up into tinier and  tinier ones until we arrive at a mismatch between beginning and end, or a base case.
