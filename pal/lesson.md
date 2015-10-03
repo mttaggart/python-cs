@@ -27,7 +27,7 @@ Recursion is all about taking large problems and breaking them down into
 smaller, eminently solvable problems.
 
 Start off by asking students how they mentally determine whether a word or
-phrase is a paindrome. Odds are you'll get something like "Check the start and
+phrase is a palindrome. Odds are you'll get something like "Check the start and
 end of the phrase; see if they match; keep going." That's about right for the
 computer programmy version as well. Since this checking-beginning-and-end deal
 is a repetitive process, your students' instincts should tell them right away
@@ -43,3 +43,8 @@ character against second character. If they match, `True`; if not, `False`.
 
 These two are known as "base cases"—the simplest form(s) of a given problem in
 a recursive algorithm. They're the floor, so to speak, of our recursion.
+
+## pal-1.py
+
+This file uses an iterative approach to finding a palindrome. Nothing different
+here except for the string slicing. Strings, like lists, can be accessed by index using brackets.
