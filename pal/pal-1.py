@@ -12,3 +12,5 @@ def pal_iter(test):
                 test = test[1:-1]
             else:
                 return False
+
+print(pal_iter("racecar"))
