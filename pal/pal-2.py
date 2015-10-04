@@ -9,4 +9,4 @@ def pal_recur(test):
         else:
             return False
 
-print(pal_recur("abba"))
+print(pal_recur("somanydynamos"))

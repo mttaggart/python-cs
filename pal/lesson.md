@@ -1,4 +1,4 @@
-# Palindroms
+# Palindromes
 In this lesson, students will write a recursive function that determines whether
 a given string is a palindrome.
 
@@ -44,8 +44,14 @@ character against second character. If they match, `True`; if not, `False`.
 These two are known as "base cases"—the simplest form(s) of a given problem in
 a recursive algorithm. They're the floor, so to speak, of our recursion.
 
-## pal-1.py
+## pal-1
 This file uses an iterative approach to finding a palindrome. Nothing different
 here except for the string slicing. Strings, like lists, can be accessed by index using brackets.
 
 The strategy for this algorithm is no different than the strategy for the recursive algorithm coming up next: take a big string and slice it up into tinier and  tinier ones until we arrive at a mismatch between beginning and end, or a base case.
+
+## pal-2
+Here we use recursion rather than iteration. Note that we return a call to the function if `test` doesn't match a base case but still a candidate for a palindromicity.
+
+## pal-race
+This last program demonstrates the speed difference between iteration and recursion. The `time-test` function takes 3 arguments: a function to test, a label for the function, and the argument to pass to the function. Using the `time` module, we measure the time elapsed between the start and end of the function. 
