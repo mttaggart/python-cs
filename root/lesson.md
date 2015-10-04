@@ -1,57 +1,65 @@
-# Palindromes
-In this lesson, students will write a recursive function that determines whether
-a given string is a palindrome.
+# Root
+In this lesson, students will write a function that uses bisection search to determine the square root of a given number.
 
 ##Recommended Prerequisite Modules
 * mult
-* inventory
+* div
+* pal
 
 ## Essential Questions
-* What makes an algorithm recursive?
-* When would we want to use a recursive algorithm?
+* Where can we use bisection search?
+* Is Computer Science an exact science?
 
 ## Resources
 * Python v.3.x
 * IDLE or Terminal
 
 ## Skills
-* `for`/`while` loops
-* functions
-* string manipulation
+* Algorithm building
 
 ## Instructional suggestions
-Let's get this out of the way right now: Python's string manipulation abilities
-give us a ridiculously easy way of checking for simple palindromes. But that's
-not the point here. We're after an understanding of recursive algorithms. Why?
-Recursion is all about taking large problems and breaking them down into
-smaller, eminently solvable problems.
+Imagine you can do math, know what a square root is, but have no memorized multiplication facts. Now find the square root of 16. How do you begin?
 
-Start off by asking students how they mentally determine whether a word or
-phrase is a palindrome. Odds are you'll get something like "Check the start and
-end of the phrase; see if they match; keep going." That's about right for the
-computer programmy version as well. Since this checking-beginning-and-end deal
-is a repetitive process, your students' instincts should tell them right away
-that they'll need a loop. Now, this is doable with a `for` loop, but it's so
-messy as to be confusing.
+Most students would begin with good ol' guess-and-check. That's not a bad idea! But what should the first guess be?
 
-Rather, consider the simplest palindrome: a one-character string. We know for
-certain that every one-character string is a palindrome. So our algorithm should
-return `True` without any other work if it encounters a one-character string.
+The *possibility space* for the root is between zero and the square. Splitting the space in half is a very strong strategy. There are a few better ones, but this is simple and effective. Let's see how this goes.
 
-What about a two-character string? Here we do the classic checking first
-character against second character. If they match, `True`; if not, `False`.
+    #Find the square root of 16
+    >>> Guess 8
+    >>> 8*8 = 64
+    #Too high; try half of that
+    >>> Guess 4
+    >>> 4*4 = 16
+    #Got it!
 
-These two are known as "base cases"—the simplest form(s) of a given problem in
-a recursive algorithm. They're the floor, so to speak, of our recursion.
+That worked out pretty well. What happens when we go to 25?
 
-## pal-1
-This file uses an iterative approach to finding a palindrome. Nothing different
-here except for the string slicing. Strings, like lists, can be accessed by index using brackets.
+    #Find the square root of 25
+    >>> Guess 12.5
+    >>> 12.5 * 12.5 = 156.25
+    #Too high; try half of that
+    >>> Guess 6.25
+    >>> 6.25 * 6.25 = 39.0625
+    #Too high; try half of that
+    >>> 3.125 * 3.125 = 9.765625
+    #Too low; try the midpoint between 3.125 and 6.25
+    >>> 4.6875 * 4.6875 = 21.97265625
+    #Too low; try the midpoint between 4.6875 and 6.25
+    >>> 5.46875 * 5.46875 = 29.9072265625
+    #Too high; try the midpoint between 4.6875 and 5.46875
+    >>> 5.078125 * 5.078125 = 25.787353515625
+    #See the problem here?
 
-The strategy for this algorithm is no different than the strategy for the recursive algorithm coming up next: take a big string and slice it up into tinier and  tinier ones until we arrive at a mismatch between beginning and end, or a base case.
+Our guess and check method, because of the nature of floating point numbers, will try to get closer and closer, but never get all the way to 25.0000....
 
-## pal-2
-Here we use recursion rather than iteration. Note that we return a call to the function if `test` doesn't match a base case but still a candidate for a palindromicity.
+## root-1
+This program uses bisection search but has no safety for the endless hunting for more precise roots. Let students write and run this program.
 
-## pal-race
-This last program demonstrates the speed difference between iteration and recursion. The `time-test` function takes 3 arguments: a function to test, a label for the function, and the argument to pass to the function. Using the `time` module, we measure the time elapsed between the start and end of the function. 
+The example code searches for 16. Have students write this and enjoy that the algorithm works. Then change it to 25. They'll have to use Ctrl-C to stop the program once it runs amok, but that's a valuable lesson in itself.
+
+##root-2
+Here we use `epsilon`—essentially a "close enough" test to see if the algorithm can stop looking. `epsilon` is the degree of precision for our algorithm. Experiment with different values here.
+
+Before showing students the example code, discuss strategies for determining whether the algorithm can stop searching. The key word that should enter the conversation is "difference". Once that word is out there, the notion of using a subtraction operation should become clear.
+
+The sample code also logs how many guesses it took, just for fun.
