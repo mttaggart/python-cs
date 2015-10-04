@@ -63,3 +63,11 @@ Here we use `epsilon`—essentially a "close enough" test to see if the algorith
 Before showing students the example code, discuss strategies for determining whether the algorithm can stop searching. The key word that should enter the conversation is "difference". Once that word is out there, the notion of using a subtraction operation should become clear.
 
 The sample code also logs how many guesses it took, just for fun.
+
+## root-recur
+If students have done the `pal` module, ask them to rewrite this algorithm recursively. The trick here is remembering that you'll have to pass the original *and* the guess through each recursion, so the function will have to take at least two arguments.
+
+You might want to consider implementing the time-test function from `pal` here to see which algorithm is faster.
+
+##Going further
+Rootfinding is a deep topic in mathematics, and bisection search, while simple, is not the most efficient. The more advanced algorithms require a little bit more work to implement (The Newton-Raphson algorithm requires derivation), but implementing these in Python would be a fun adventure for the curious.
