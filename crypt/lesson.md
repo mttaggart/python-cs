@@ -19,5 +19,6 @@ In this lesson, students will write some functions that encrypt and decrypt info
 ## Skills
 * Encryption
 * Security Awareness
+* Error Handling
 
 ## Instructional suggestions
