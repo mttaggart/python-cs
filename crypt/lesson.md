@@ -20,5 +20,6 @@ In this lesson, students will write some functions that encrypt and decrypt info
 * Encryption
 * Security Awareness
 * Error Handling
+* Command-line arguments
 
 ## Instructional suggestions

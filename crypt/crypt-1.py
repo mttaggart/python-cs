@@ -18,7 +18,6 @@ uppers = string.ascii_uppercase
 def shift(char, shift):
     """
     Takes string CHAR and returns the character at shifted index of the alphabet.
-
     shift('e',1) -> 'f'
     """
     #First thing we want to do is find which alphabet this thing is in, if any.
