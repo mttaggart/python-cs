@@ -81,7 +81,7 @@ Dictionaries use key/value pairs to store information. Instead of using an index
 
 This version of the program makes a dictionary of lowercase and capital letters once, and uses it to encrypt the message. This is much more efficient than running the old `shift()` function.
 
-### kryptos
+### cryptos
 Because of the weakness of the Caesar Cipher, we can use a random assignment of the alphabet to our new encryption—essentially a shuffle of the alphabet. That way, no one can determine from a single letter or word exactly how to decrypt the message. This cipher is still weak enough that it would take only a little time (a day at most) to decrypt a message by hand. A computer could do it in perhaps less than a second.
 
 But the concept here is more important than the specific implementation: we're going to create a key as a separate file that we can share with others so they can decrypt a message.
@@ -90,9 +90,17 @@ We'll write the program so that it can also decrypt messages. In fact, we'll wri
 
 From a results standpoint want the program to work like this:
 
-    # kryptos --encrypt "Phrase to encrypt"
-    # kryptos --decrypt --key /path/to/key.json "Tlvewi xs higvctx"
-    # kryptos --encrypt --file /path/to/file.txt
-    # kryptos --keygen
+    # cryptos --encrypt "Phrase to encrypt"
+    # cryptos --decrypt "Tlvewi xs higvctx" --key /path/to/key.json
+    # cryptos --keygen
 
 If this is how we want the command-line options to work, we need to use a new module: `argparser`. You can read about this module in the [Python docs](https://docs.python.org/3/library/argparse.html#module-argparse)
+
+#### Shell scripts
+Cryptos is a shell script. You'll notice that it doesn't end in `.py`. Additionally, the very first line of code looks very weird:
+
+    #!/usr/bin/python
+
+This line is known as a "shebang". It tells the operating system what shell to use to interpret the code inside. Python is not the only option, but it's the one we'll use to make this utility. The rest of the code should be fairly familiar, just differently structurd because of `argparse`.
+
+This is not necessarily code that students would write at this level. However, it's incredibly helpful to see programs like this, since it hints at structure of programs we use every day.
