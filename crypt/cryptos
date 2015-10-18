@@ -1,0 +1,100 @@
+#!/usr/bin/python
+import sys,random,argparse,json,string,os
+parser = argparse.ArgumentParser(description="encrypt/decrypt text using cipher keys.")
+parser.add_argument("-e", "--encrypt",
+                    action="store",
+                    default="",
+                    type=str,
+                    help="encrypt a string"
+)
+parser.add_argument("-d", "--decrypt",
+                    action="store",
+                    default="",
+                    type=str,
+                    help="decrypt a string"
+)
+parser.add_argument("-f", "--file",
+                    action="store",
+                    type=argparse.FileType("r"),
+                    nargs="?",
+                    help="Read from file"
+)
+parser.add_argument("-k", "--key",
+                    action="store",
+                    type=argparse.FileType("r"),
+                    help="key to use for encrypion/decryption"
+)
+parser.add_argument("-g", "--keygen",
+                    action="store",
+                    nargs="?",
+                    default=False,
+                    help="Generate key"
+)
+parser.add_argument("-w", "--write",
+                    action="store",
+                    type=argparse.FileType("w"),
+                    nargs="?",
+                    help="Write output to file"
+)
+args = parser.parse_args()
+
+def keygen():
+    libraries = [list(string.ascii_lowercase), list(string.ascii_uppercase)]
+    shift_library = {}
+    for lib in libraries:
+        lib_popper = lib[:]
+        for char in lib:
+            shift_library[char] = lib_popper.pop(random.randint(0,len(lib_popper)-1))
+    return json.dumps(shift_library)
+
+def encrypt(phrase,key):
+    import_key = json.loads(key)
+    encrypted_phrase = ""
+    for char in phrase:
+        try:
+            encrypted_phrase += import_key[char]
+        except KeyError:
+            encrypted_phrase += char
+    return encrypted_phrase
+
+def decrypt(phrase,key):
+    import_key = json.loads(key)
+    reverse_key = {v:k for k, v in import_key.items()}
+    decrypted_phrase = ""
+    for char in phrase:
+        try:
+            decrypted_phrase += reverse_key[char]
+        except KeyError:
+            decrypted_phrase += char
+    return decrypted_phrase
+
+def main():
+    if args.encrypt:
+        if not args.key:
+            print("No key provided; generating new key")
+            new_key = keygen()
+            key_path = os.getcwd() + "/key.json"
+            key_file = open("key.json",mode="w")
+            key_file.write(new_key)
+            key = new_key
+        else:
+            key = args.key.read()
+        print(encrypt(args.encrypt,key))
+
+    if args.decrypt:
+        if not args.key:
+            print("Can't decrypt: No key provided")
+            exit()
+        else:
+            key = args.key.read()
+        print(decrypt(args.decrypt,key))
+
+    if args.keygen:
+        print("Generated key")
+        if(args.write):
+            args.write.write(keygen())
+        else:
+            print(keygen())
+
+if __name__ == "__main__":
+    main()
