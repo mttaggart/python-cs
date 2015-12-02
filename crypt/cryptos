@@ -25,8 +25,7 @@ parser.add_argument("-k", "--key",
                     help="key to use for encrypion/decryption"
 )
 parser.add_argument("-g", "--keygen",
-                    action="store",
-                    nargs="?",
+                    action="store_true",
                     default=False,
                     help="Generate key"
 )
@@ -45,7 +44,7 @@ def keygen():
         lib_popper = lib[:]
         for char in lib:
             shift_library[char] = lib_popper.pop(random.randint(0,len(lib_popper)-1))
-    return json.dumps(shift_library)
+    return json.dumps(shift_library, indent="\t")
 
 def encrypt(phrase,key):
     import_key = json.loads(key)
@@ -70,6 +69,7 @@ def decrypt(phrase,key):
 
 def main():
     if args.encrypt:
+        message = args.file or args.encrypt
         if not args.key:
             print("No key provided; generating new key")
             new_key = keygen()
