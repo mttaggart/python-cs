@@ -12,7 +12,7 @@ These lessons are written with teachers in mind—specifically, teachers who are
 unfamiliar with Python, and perhaps with programming entirely. No prior
 knowledge is necessary to get going with these lessons.
 
-## What *will* I need?
+## What will I need?
 The lessons are designed for use with the [IDLE](http://python.org)
 environment, so go get that. And, of course, I recommend using a GNU/Linux
 operating system, but any \*Nix-flavored OS will do. I suppose Windows would be
