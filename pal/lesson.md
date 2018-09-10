@@ -2,7 +2,7 @@
 In this lesson, students will write a recursive function that determines whether
 a given string is a palindrome.
 
-##Recommended Prerequisite Modules
+## Recommended Prerequisite Modules
 * mult
 * inventory
 
