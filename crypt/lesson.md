@@ -1,7 +1,7 @@
 # Crypt
 In this lesson, students will write some functions that encrypt and decrypt information.
 
-##Recommended Prerequisite Modules
+## Recommended Prerequisite Modules
 * mult
 * div
 * pal
