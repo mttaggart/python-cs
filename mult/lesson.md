@@ -3,7 +3,7 @@ In this lesson, students will use Python to discover that all complex math
 operations are just implementations of addition/subtraction Well,
 really addition.
 
-##Recommended Prerequisite Modules
+## Recommended Prerequisite Modules
 * str
 * list
 
@@ -76,7 +76,7 @@ by commas. So then we have to deal with a big ol' string and pull all our number
 out. *Then* we have to multiply each successive term together to create a product.
 
 This one's a lot tougher, but the only new things in the program are the `split()`
-string function, which returns a `list'. Lists are essentially mutable tuples.
+string function, which returns a `list`. Lists are essentially mutable tuples.
 
 As always, [**read the docs!**](http://docs.python.org).
 

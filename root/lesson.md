@@ -1,7 +1,7 @@
 # Root
 In this lesson, students will write a function that uses bisection search to determine the square root of a given number.
 
-##Recommended Prerequisite Modules
+## Recommended Prerequisite Modules
 * mult
 * div
 * pal
